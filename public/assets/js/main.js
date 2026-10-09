@@ -32,15 +32,12 @@ const backToTop = document.getElementById('backToTop');
 function handleScrollEffects() {
   const currentScrollY = window.scrollY;
   siteNav?.classList.toggle('scrolled', currentScrollY > 30);
-  backToTop?.classList.toggle('visible', currentScrollY > 400);
 }
 
 window.addEventListener('scroll', handleScrollEffects, { passive: true });
 handleScrollEffects();
 
-backToTop?.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+
 
 
 // ─── 3. SECCIÓN ACTIVA EN EL NAV (IntersectionObserver API) ──
